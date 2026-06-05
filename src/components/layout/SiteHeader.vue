@@ -2,7 +2,7 @@
     <header class="site-header" :class="{ 'site-header--scrolled': isScrolled }">
         <div class="container site-header__inner">
             <RouterLink to="/" class="site-header__logo" aria-label="SynApp — Home">
-                <img src="/lava.svg" alt="SynApp Logo" class="logo-icon" aria-hidden="true"/>
+                <img src="/full_white.svg" alt="SynApp Logo" class="logo-icon" aria-hidden="true"/>
             </RouterLink>
 
             <nav class="site-header__nav" aria-label="Primary navigation">
