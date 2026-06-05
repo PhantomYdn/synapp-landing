@@ -1,0 +1,63 @@
+{
+  "nav": {
+    "features": "Features",
+    "pricing": "Pricing",
+    "contact": "Contact",
+    "cta": "Book a Demo"
+  },
+  "footer": {
+    "tagline": "Telegram management at scale.",
+    "home": "Home",
+    "features": "Features",
+    "pricing": "Pricing",
+    "contact": "Contact",
+    "privacy": "Privacy Policy",
+    "copyright": "© {year} SynApp. All rights reserved."
+  },
+  "home": {
+    "hero": {
+      "badge": "Telegram Management Platform",
+      "headline": "Control Every Chat. Every User. At Scale.",
+      "sub": "SynApp gives operations teams a unified dashboard to manage Telegram chats, users, permissions, and automation — without the manual overhead.",
+      "cta_primary": "Book a Demo",
+      "cta_secondary": "See Features"
+    }
+  },
+  "contact": {
+    "hero_badge": "Get in Touch",
+    "hero_title": "Let's Talk About Your Setup",
+    "hero_sub": "Book a demo, ask about pricing, or tell us what you're managing. Our team will get back to you within one business day.",
+    "form_title": "Request a Demo",
+    "field_name": "Full Name",
+    "field_email": "Work Email",
+    "field_company": "Company",
+    "field_role": "Your Role (optional)",
+    "field_team_size": "Number of Telegram Chats / Team Size (optional)",
+    "field_message": "Message",
+    "submit": "Send Message",
+    "success_title": "Message received.",
+    "success_sub": "We'll get back to you within one business day.",
+    "trust_title": "What to Expect",
+    "trust_1": "Personal response from our team — not a bot.",
+    "trust_2": "A tailored demo based on your actual use case.",
+    "trust_3": "No pressure. Just a clear look at what SynApp can do."
+  },
+  "features": {
+    "hero_badge": "Full Feature Set",
+    "hero_title": "Everything You Need to Run Telegram at Scale",
+    "hero_sub": "SynApp replaces a dozen manual workflows with one structured platform. Here's what's under the hood."
+  },
+  "pricing": {
+    "hero_badge": "Pricing",
+    "hero_title": "Simple, Transparent Pricing",
+    "hero_sub": "Pick the plan that fits your scale. Every plan includes the core platform. No hidden fees.",
+    "billed_monthly": "All prices billed monthly. Annual billing available — contact us for details.",
+    "enterprise_title": "Need a custom setup?",
+    "enterprise_sub": "Enterprise plans include custom deployment, advanced compliance controls, and dedicated support. Let's talk.",
+    "enterprise_cta": "Contact Sales"
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "last_updated": "Last updated: January 2025"
+  }
+}
