@@ -1,7 +1,7 @@
 <template>
   <div class="faq-accordion">
     <div
-      v-for="(item, index) in items"
+      v-for="(item, index) in props.items"
       :key="index"
       class="faq-item reveal"
       :class="`reveal--delay-${Math.min(index + 1, 5)}`"
