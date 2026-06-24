@@ -22,7 +22,7 @@ export default defineConfig({
     nav: [
       { text: 'User Guide', link: '/user_guide' },
       { text: 'Use Cases', link: '/use_cases' },
-      { text: '← Back to site', link: 'https://synapp.io' },
+      { text: '← Back to site', link: 'https://static.diodlab.xyz' },
     ],
 
     sidebar: [
