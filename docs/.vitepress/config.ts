@@ -11,7 +11,6 @@ export default defineConfig({
   outDir: '../dist/docs',
 
   cleanUrls: false,
-  lastUpdated: true,
 
   head: [
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
