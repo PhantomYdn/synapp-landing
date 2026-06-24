@@ -8,6 +8,7 @@
             <nav class="site-header__nav" aria-label="Primary navigation">
                 <RouterLink to="/features" class="nav-link">{{ t('nav.features') }}</RouterLink>
                 <RouterLink to="/pricing" class="nav-link">{{ t('nav.pricing') }}</RouterLink>
+                <a href="/docs/" class="nav-link">{{ t('nav.docs') }}</a>
                 <RouterLink to="/contact" class="nav-link">{{ t('nav.contact') }}</RouterLink>
             </nav>
 

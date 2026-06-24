@@ -2,6 +2,7 @@
   "nav": {
     "features": "Features",
     "pricing": "Pricing",
+    "docs": "Docs",
     "contact": "Contact",
     "cta": "Book a Demo"
   },
@@ -10,6 +11,7 @@
     "home": "Home",
     "features": "Features",
     "pricing": "Pricing",
+    "docs": "Docs",
     "contact": "Contact",
     "privacy": "Privacy Policy",
     "copyright": "© {year} SynApp. All rights reserved."

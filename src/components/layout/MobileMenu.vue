@@ -4,6 +4,7 @@
       <nav class="mobile-menu__nav" aria-label="Mobile navigation">
         <RouterLink to="/features" class="mobile-nav-link" @click="emit('close')">Features</RouterLink>
         <RouterLink to="/pricing" class="mobile-nav-link" @click="emit('close')">Pricing</RouterLink>
+        <a href="/docs/" class="mobile-nav-link" @click="emit('close')">Docs</a>
         <RouterLink to="/contact" class="mobile-nav-link" @click="emit('close')">Contact</RouterLink>
         <div class="mobile-menu__divider"></div>
         <RouterLink to="/contact" class="mobile-cta" @click="emit('close')">Book a Demo</RouterLink>
