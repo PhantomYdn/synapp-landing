@@ -22,7 +22,7 @@ export default defineConfig({
     nav: [
       { text: 'User Guide', link: '/user_guide' },
       { text: 'Use Cases', link: '/use_cases' },
-      { text: '← Back to site', link: 'https://static.diodlab.xyz' },
+      // { text: '← Back to site', link: 'https://static.diodlab.xyz' },
     ],
 
     sidebar: [
@@ -58,13 +58,13 @@ export default defineConfig({
         link: '/use_cases',
         collapsed: false,
         items: [
-          { text: 'Onboarding a new chat', link: '/use_cases#1-onboarding-a-new-chat-into-synapp' },
-          { text: 'Mass-inviting a team', link: '/use_cases#2-mass-inviting-a-new-team-to-their-chats' },
-          { text: 'Broadcasting safely', link: '/use_cases#3-broadcasting-an-announcement-to-many-chats-safely' },
-          { text: 'Offboarding an employee', link: '/use_cases#4-offboarding-a-departing-employee' },
-          { text: 'Automating with rules', link: '/use_cases#5-automating-access-with-tags-and-rules' },
-          { text: 'Auditing chat membership', link: '/use_cases#6-auditing-who-is-actually-in-your-chats' },
-          { text: 'Validating from Telegram', link: '/use_cases#7-validating-team-membership-from-inside-telegram' },
+          { text: 'Onboarding a new chat', link: '/use_cases#_1-onboarding-a-new-chat-into-synapp' },
+          { text: 'Mass-inviting a team', link: '/use_cases#_2-mass-inviting-a-new-team-to-their-chats' },
+          { text: 'Broadcasting safely', link: '/use_cases#_3-broadcasting-an-announcement-to-many-chats-safely' },
+          { text: 'Offboarding an employee', link: '/use_cases#_4-offboarding-a-departing-employee' },
+          { text: 'Automating with rules', link: '/use_cases#_5-automating-access-with-tags-and-rules' },
+          { text: 'Auditing chat membership', link: '/use_cases#_6-auditing-who-is-actually-in-your-chats' },
+          { text: 'Validating from Telegram', link: '/use_cases#_7-validating-team-membership-from-inside-telegram' },
         ],
       },
     ],

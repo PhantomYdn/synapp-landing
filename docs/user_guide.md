@@ -185,13 +185,20 @@ this chat. You can search, filter (e.g. show only **invited** users who haven't
 joined yet), tag, message, and remove members from here.
 
 ### Manage permissions
-Permission dialogs let you review and adjust administrator rights for the bot and
-for promoted users within this chat. Available rights depend on the chat type
-(group, supergroup, or channel) — for example: manage chat, delete messages,
-restrict/promote members, change info, invite users, pin messages, manage video
-chats, and (for channels/supergroups) manage topics and stories.
+The **Bot Rights** button displays the administrative privileges granted
+to the bot within the current chat context, while the adjacent **Chat Admins**
+button opens a dialog that lists all Telegram administrators in the chat along
+with their assigned permissions, allowing you to promote or demote admins with
+granular control over individual rights such as manage chat, delete messages,
+restrict and promote members, change info, invite users, pin messages, manage
+video chats, and—for channels and supergroups—manage topics and stories, with
+the available options automatically adapting based on the chat type (group,
+supergroup, or channel).
 
----
+::: danger Important
+The bot can only demote administrators that it has previously promoted and can
+only grant permissions that are equal to or less than its own current set.
+:::
 
 ## Users
 
@@ -438,6 +445,11 @@ Configure the `/validate` bot command used to check team membership:
   blacklisted during `/validate`.
 - Options to **include blacklisted tag names** and **descriptions** in the
   response.
+
+::: danger Important
+When a user carries both a team validation tag and a blacklisted user tag,
+the user will always be marked as blacklisted.
+:::
 
 ### SAML (SSO) settings
 Enable and configure single sign-on. You can load settings from the database,
