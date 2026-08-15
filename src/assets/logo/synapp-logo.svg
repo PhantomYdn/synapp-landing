@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 36" fill="none">
-  <!-- Icon mark -->
-  <rect width="36" height="36" rx="9" fill="#0FA5E9" fill-opacity="0.12"/>
-  <path d="M7 13C7 11.9 7.9 11 9 11h7l3.5 4-3.5 4H9C7.9 19 7 18.1 7 17v-4z" fill="#0FA5E9"/>
-  <path d="M29 19c0-1.1-.9-2-2-2h-7l-3.5 4 3.5 4h7c1.1 0 2-.9 2-2v-4z" fill="#EC4799"/>
-  <circle cx="18" cy="18" r="2" fill="white"/>
-  <!-- Wordmark -->
-  <text x="44" y="24" font-family="General Sans, sans-serif" font-weight="600" font-size="18" fill="white">SynApp</text>
-</svg>

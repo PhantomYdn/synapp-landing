@@ -40,8 +40,6 @@
                 <th scope="col">Basic</th>
                 <th scope="col">Business</th>
                 <th scope="col" class="col--highlight">Business Plus</th>
-                <th scope="col">Business Premium</th>
-                <th scope="col">Enterprise</th>
               </tr>
             </thead>
             <tbody>
@@ -49,8 +47,6 @@
                 <td class="feature-col feature-name">{{ feature.label }}</td>
                 <td><ComparisonCell :value="feature.basic" /></td>
                 <td><ComparisonCell :value="feature.business" /></td>
-                <td class="col--highlight"><ComparisonCell :value="feature.businessPlus" /></td>
-                <td><ComparisonCell :value="feature.businessPremium" /></td>
                 <td><ComparisonCell :value="feature.enterprise" /></td>
               </tr>
             </tbody>
