@@ -10,7 +10,7 @@ export const homepageFaqs: FaqItem[] = [
   },
   {
     question: 'How does SynApp connect to Telegram?',
-    answer: 'SynApp connects via the Telegram Bot API and, where needed, the MTProto API. Setup is guided and typically takes under 30 minutes. Once connected, your chats and users are imported automatically.',
+    answer: 'SynApp connects via the Telegram Bot API. Setup is guided and typically takes under 30 minutes. Once connected, your chats and users can be imported seamlessly.',
   },
   {
     question: 'Does SynApp replace Telegram?',

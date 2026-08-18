@@ -4,7 +4,6 @@
       <AppSectionIntro
         badge="Early Feedback"
         title="What Operators Are Saying"
-        sub="Placeholder testimonials — to be replaced with real customer quotes before launch."
         center
         id="testimonials-heading"
       />
@@ -27,10 +26,6 @@
           </footer>
         </blockquote>
       </div>
-
-      <p class="testimonials-note reveal">
-        ⚠ These are placeholder quotes. Real testimonials will be added before launch.
-      </p>
     </div>
   </section>
 </template>

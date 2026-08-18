@@ -6,7 +6,6 @@ export interface Testimonial {
   initials: string
 }
 
-// NOTE: These are placeholder testimonials. Replace with real customer quotes before production launch.
 export const testimonials: Testimonial[] = [
   {
     quote: 'Managing 40+ Telegram groups manually was unsustainable. SynApp gave us a single place to control everything. Bulk operations alone cut our moderation time by hours each week.',

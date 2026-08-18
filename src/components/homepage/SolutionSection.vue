@@ -35,7 +35,7 @@
         </div>
 
         <div class="solution-media reveal reveal--delay-2">
-          <ScreenshotPlaceholder label="Solution overview — SynApp dashboard" ratio="4/3" />
+          <ScreenshotPlaceholder label="Solution overview — SynApp dashboard" ratio="13/9" src="/images/the-solution.png" />
         </div>
       </div>
     </div>
