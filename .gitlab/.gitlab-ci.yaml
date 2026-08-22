@@ -22,7 +22,6 @@ build-image:
     - cd go-repo
     - >
       docker build
-      -f go-repo/Dockerfile
       --build-arg FRONTEND_SRC="$FRONTEND_SRC"
       -t "$CI_REGISTRY_IMAGE:latest"
       .
