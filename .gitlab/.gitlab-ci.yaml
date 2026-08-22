@@ -10,7 +10,7 @@ build-image:
   environment:
     name: production
   rules:
-    - if: '$CI_COMMIT_BRANCH == "deploy"'
+    - if: '$CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH'
       when: manual
   manual_confirmation: 'Build and push $CI_COMMIT_REF_SLUG to the registry?'
   allow_failure: false
