@@ -29,5 +29,5 @@ build-image:
       -t "$CI_REGISTRY_IMAGE:$VERSION"
       -t "$CI_REGISTRY_IMAGE:latest"
       .
-    - docker push "$CI_REGISTRY_IMAGE:$VERSION"
+    # - docker push "$CI_REGISTRY_IMAGE:$VERSION"
     - docker push "$CI_REGISTRY_IMAGE:latest"
