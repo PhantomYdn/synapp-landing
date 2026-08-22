@@ -1,5 +1,6 @@
 stages:
   - build
+  - deploy
 
 build-image:
   stage: build
@@ -28,3 +29,19 @@ build-image:
       -t "$CI_REGISTRY_IMAGE:latest"
       .
     - docker push "$CI_REGISTRY_IMAGE:latest"
+
+deploy_production:
+  stage: deploy
+  image: alpine:latest
+  needs: ["build-image"]
+  before_script:
+    - apk add --no-cache openssh-client
+    - mkdir -p ~/.ssh
+    - echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_ed25519
+    - chmod 600 ~/.ssh/id_ed25519
+    - echo "$SSH_KNOWN_HOSTS" > ~/.ssh/known_hosts
+    - chmod 600 ~/.ssh/known_hosts
+  script:
+    - ssh -i ~/.ssh/id_ed25519 deployuser@your-server-ip "deploy latest"
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "main"'
