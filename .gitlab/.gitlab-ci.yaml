@@ -33,7 +33,7 @@ build-image:
 deploy_production:
   stage: deploy
   image: alpine:latest
-#  needs: ["build-image"]
+  needs: ["build-image"]
   before_script:
     - apk add --no-cache openssh-client
     - mkdir -p ~/.ssh
@@ -44,5 +44,4 @@ deploy_production:
   script:
     - ssh -i ~/.ssh/id_ed25519 diod@95.181.174.188 "deploy latest"
   rules:
-    - if: '$CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH'
-      when: manual
+    - if: '$CI_COMMIT_BRANCH == "main"'
