@@ -3,15 +3,13 @@ stages:
 
 build-image:
   stage: build
-  image: docker:27
+  image: docker:27-cli
   services:
     - docker:27-dind
   variables:
     DOCKER_TLS_CERTDIR: "/certs"
     GO_REPO_URL: "https://gitlab.com/mygroup/go-runner-service.git"
     FRONTEND_SRC: "."
-  environment:
-    name: production
   rules:
     - if: '$CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH'
       when: manual
