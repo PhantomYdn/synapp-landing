@@ -19,13 +19,10 @@ build-image:
     - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" "$CI_REGISTRY"
   script:
     - git clone --depth 1 "$GO_REPO_URL" go-repo
-    # - VERSION=$(node -p "require('./package.json').version")
     - >
       docker build
       -f go-repo/Dockerfile
       --build-arg FRONTEND_SRC="$FRONTEND_SRC"
-      -t "$CI_REGISTRY_IMAGE:$VERSION"
       -t "$CI_REGISTRY_IMAGE:latest"
       .
-    # - docker push "$CI_REGISTRY_IMAGE:$VERSION"
     - docker push "$CI_REGISTRY_IMAGE:latest"
