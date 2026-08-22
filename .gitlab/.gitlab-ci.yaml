@@ -19,8 +19,9 @@ build-image:
     - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" "$CI_REGISTRY"
   script:
     - git clone --depth 1 "$GO_REPO_URL" go-repo
+    - mkdir -p go-repo/frontend
+    - cp -r $(ls -A | grep -v go-repo) go-repo/frontend/
     - cd go-repo
-    - ls -la ..
     - >
       docker build
       --build-arg FRONTEND_SRC="$FRONTEND_SRC"
