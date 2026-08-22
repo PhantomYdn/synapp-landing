@@ -19,10 +19,11 @@ build-image:
     - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" "$CI_REGISTRY"
   script:
     - git clone --depth 1 "$GO_REPO_URL" go-repo
+    - cd go-repo
     - >
       docker build
       -f go-repo/Dockerfile
       --build-arg FRONTEND_SRC="$FRONTEND_SRC"
       -t "$CI_REGISTRY_IMAGE:latest"
-      .go-repo
+      .
     - docker push "$CI_REGISTRY_IMAGE:latest"
