@@ -9,7 +9,7 @@ build-image:
   variables:
     DOCKER_TLS_CERTDIR: "/certs"
     GO_REPO_URL: "https://gitlab.com/DiodDan/gauze.git"
-    FRONTEND_SRC: "../."
+    FRONTEND_SRC: ".."
   rules:
     - if: '$CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH'
       when: manual
@@ -20,6 +20,7 @@ build-image:
   script:
     - git clone --depth 1 "$GO_REPO_URL" go-repo
     - cd go-repo
+    - ls -la ..
     - >
       docker build
       --build-arg FRONTEND_SRC="$FRONTEND_SRC"
