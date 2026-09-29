@@ -89,6 +89,15 @@ useRevealOnScroll()
 </script>
 
 <style scoped>
+/* Same gap under the hero as the Pricing page: only PageHero's bottom padding */
+.features-main {
+    padding-top: 0;
+}
+
+.features-main .feature-group:first-of-type {
+    padding-top: 0;
+}
+
 .feature-group {
     padding-block: clamp(3rem, 7vw, 6rem);
     border-bottom: 1px solid var(--color-border);

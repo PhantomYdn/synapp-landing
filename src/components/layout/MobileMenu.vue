@@ -2,6 +2,7 @@
   <Transition name="mobile-menu">
     <div v-if="open" class="mobile-menu" :id="id" role="dialog" aria-modal="true" aria-label="Navigation menu">
       <nav class="mobile-menu__nav" aria-label="Mobile navigation">
+        <RouterLink to="/" class="mobile-nav-link" @click="emit('close')">Home</RouterLink>
         <RouterLink to="/features" class="mobile-nav-link" @click="emit('close')">Features</RouterLink>
         <RouterLink to="/pricing" class="mobile-nav-link" @click="emit('close')">Pricing</RouterLink>
         <a href="/docs/" class="mobile-nav-link" @click="emit('close')">Docs</a>

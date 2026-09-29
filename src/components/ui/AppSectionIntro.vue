@@ -25,7 +25,7 @@ withDefaults(
 
 <style scoped>
 .section-intro {
-  margin-bottom: clamp(2.5rem, 5vw, 4rem);
+  margin-bottom: clamp(2rem, 4vw, 3rem);
   max-width: 640px;
 }
 

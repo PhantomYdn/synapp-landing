@@ -85,6 +85,7 @@ useRevealOnScroll()
 
 <style scoped>
 .contact-main {
+    padding-top: 0; /* gap under the hero comes only from PageHero, same as Pricing */
     padding-bottom: clamp(5rem, 12vw, 9rem);
 }
 

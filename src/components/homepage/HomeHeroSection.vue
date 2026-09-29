@@ -9,11 +9,9 @@
 
         <div class="container hero__inner">
             <div class="hero__content">
-                <div class="pill reveal">
-                    <svg width="8" height="8" viewBox="0 0 8 8" aria-hidden="true">
-                        <circle cx="4" cy="4" r="4" fill="#0FA5E9"/>
-                    </svg>
-                    {{ t('home.hero.badge') }}
+                <div class="pill hero__badge reveal">
+                    <span class="hero__badge-dot" aria-hidden="true"></span>
+                    <span class="hero__badge-text">The first enterprise Telegram management platform</span>
                 </div>
 
                 <h1 id="hero-heading" class="hero__headline reveal reveal--delay-1">
@@ -44,15 +42,33 @@
             </div>
 
             <div class="hero__media reveal reveal--delay-2">
-                <div class="hero-video">
-                    <iframe
-                        class="hero-video__frame"
-                        src="https://www.youtube-nocookie.com/embed/ZgkF4rOarx0"
-                        title="SynApp product demo"
-                        loading="lazy"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen
-                    ></iframe>
+                <div class="hero__media-stack">
+                    <div class="hero-video">
+                        <iframe
+                            class="hero-video__frame"
+                            src="https://www.youtube-nocookie.com/embed/ZgkF4rOarx0"
+                            title="SynApp product demo"
+                            loading="lazy"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen
+                        ></iframe>
+                    </div>
+
+                    <div class="hero-social" role="group" aria-label="SynApp on social media">
+                        <a
+                            v-for="link in socialLinks"
+                            :key="link.id"
+                            :href="link.href"
+                            class="hero-social__link"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path :d="link.path"/>
+                            </svg>
+                            <span>{{ link.label }}</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -63,6 +79,21 @@
 import { useI18n } from 'vue-i18n'
 
 const { t } = useI18n()
+
+const socialLinks = [
+    {
+        id: 'x',
+        label: 'Follow on X',
+        href: 'https://x.com/SynAppX',
+        path: 'M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z'
+    },
+    {
+        id: 'linkedin',
+        label: 'Follow on LinkedIn',
+        href: 'https://www.linkedin.com/company/synappus/',
+        path: 'M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z'
+    }
+]
 </script>
 
 <style scoped>
@@ -134,6 +165,56 @@ const { t } = useI18n()
     display: flex;
     flex-direction: column;
     gap: var(--space-6);
+}
+
+/* Badge (corporate blue -> pink) */
+.hero__badge {
+    position: relative;
+    align-self: flex-start;
+    width: fit-content;
+    max-width: 100%;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-3);
+    padding: 0.7rem 1.4rem;
+    border: 0;
+    border-radius: 999px;
+    font-family: var(--font-heading);
+    font-size: clamp(0.9rem, 1.3vw, 1.0625rem);
+    font-weight: 600;
+    line-height: 1.35;
+    letter-spacing: 0.005em;
+    color: var(--color-white);
+    background: linear-gradient(90deg, rgba(15, 165, 233, 0.16), rgba(236, 71, 153, 0.11));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow:
+        0 0 36px -10px rgba(15, 165, 233, 0.5),
+        0 0 36px -14px rgba(236, 71, 153, 0.4);
+}
+
+/* Gradient border */
+.hero__badge::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    padding: 1px;
+    border-radius: inherit;
+    background: linear-gradient(90deg, rgba(15, 165, 233, 0.85), rgba(236, 71, 153, 0.7));
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    mask-composite: exclude;
+    pointer-events: none;
+}
+
+.hero__badge-dot {
+    width: 10px;
+    height: 10px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: var(--color-accent-blue);
+    box-shadow: 0 0 12px rgba(15, 165, 233, 0.9);
 }
 
 .hero__headline {
@@ -231,6 +312,62 @@ const { t } = useI18n()
 /* Media */
 .hero__media {
     width: 100%;
+}
+
+.hero__media-stack {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-5);
+}
+
+/* Lift the video a bit on desktop (increase the value to lift it more) */
+@media (min-width: 1024px) {
+    .hero__media-stack {
+        top: calc(-1 * var(--space-6));
+    }
+}
+
+/* Social links under the video */
+.hero-social {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-3);
+}
+
+.hero-social__link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: 0.6rem 1.1rem;
+    font-size: var(--text-sm);
+    font-weight: 600;
+    color: var(--color-text-muted);
+    text-decoration: none;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background: rgba(16, 23, 43, 0.4);
+    transition: all var(--transition-base);
+}
+
+.hero-social__link svg {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+}
+
+.hero-social__link:hover {
+    color: var(--color-white);
+    border-color: rgba(15, 165, 233, 0.5);
+    background: rgba(15, 165, 233, 0.1);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px -6px rgba(15, 165, 233, 0.4);
+}
+
+.hero-social__link:focus-visible {
+    outline: 2px solid var(--color-accent-blue);
+    outline-offset: 2px;
 }
 
 .hero-video {

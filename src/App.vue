@@ -15,9 +15,6 @@
 <script setup lang="ts">
 import SiteHeader from '@/components/layout/SiteHeader.vue'
 import SiteFooter from '@/components/layout/SiteFooter.vue'
-import { useCursorEffect } from '@/composables/useCursorEffect'
-
-useCursorEffect()
 </script>
 
 <style>
