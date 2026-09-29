@@ -42,7 +42,7 @@
                             <line x1="6" y1="6" x2="18" y2="18" />
                         </svg>
                     </button>
-                    <img :src="src" :alt="label" class="screenshot-modal__image" />
+                    <img v-if="src" :src="src" :alt="label" class="screenshot-modal__image" />
                 </div>
             </div>
         </Teleport>
