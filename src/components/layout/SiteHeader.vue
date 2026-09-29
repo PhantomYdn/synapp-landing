@@ -1,5 +1,5 @@
 <template>
-    <header class="site-header" :class="{ 'site-header--scrolled': isScrolled }">
+    <header class="site-header" :class="{ 'site-header--scrolled': isScrolled || menuOpen }">
         <div class="container site-header__inner">
             <RouterLink to="/" class="site-header__logo" aria-label="SynApp — Home">
                 <img src="/full_white.svg" alt="SynApp Logo" class="logo-icon" aria-hidden="true"/>
@@ -58,7 +58,7 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
     top: 0;
     left: 0;
     right: 0;
-    z-index: var(--z-sticky);
+    z-index: calc(var(--z-overlay) + 10);
     padding-block: 1rem;
     transition: background var(--transition-base), border-color var(--transition-base), backdrop-filter var(--transition-base);
     border-bottom: 1px solid transparent;
@@ -83,6 +83,8 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
     gap: var(--space-3);
     text-decoration: none;
     flex-shrink: 0;
+    position: relative;
+    z-index: calc(var(--z-overlay) + 1);
 }
 
 .logo-icon {
@@ -140,6 +142,8 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
     align-items: center;
     gap: var(--space-4);
     margin-left: auto;
+    position: relative;
+    z-index: calc(var(--z-overlay) + 1);
 }
 
 @media (min-width: 768px) {
@@ -193,7 +197,9 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
     border: 1px solid var(--color-border);
     border-radius: var(--radius-sm);
     cursor: pointer;
-    transition: border-color var(--transition-fast);
+    transition: all var(--transition-fast);
+    position: relative;
+    z-index: calc(var(--z-overlay) + 1);
 }
 
 .mobile-toggle:hover {
@@ -224,6 +230,7 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
 
 .hamburger--open span:nth-child(1) {
     transform: translateY(5.5px) rotate(45deg);
+    background: var(--color-white) !important;
 }
 
 .hamburger--open span:nth-child(2) {
@@ -233,5 +240,58 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
 
 .hamburger--open span:nth-child(3) {
     transform: translateY(-5.5px) rotate(-45deg);
+    background: var(--color-white) !important;
+}
+.site-header__inner {
+    display: flex;
+    align-items: center;
+    gap: var(--space-8);
+    min-width: 0; /* allow children to shrink instead of overflowing */
+}
+
+.site-header__logo,
+.site-header__actions {
+    min-width: 0;
+}
+
+.logo-icon {
+    width: clamp(120px, 38vw, 270px);
+    height: auto;
+    display: block;
+}
+
+.site-header__actions {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    margin-left: auto;
+    position: relative;
+    z-index: calc(var(--z-overlay) + 1);
+    flex-shrink: 0; /* keep button + toggle together, don't let them collapse oddly */
+}
+
+/* Tighten things up on small phones */
+@media (max-width: 420px) {
+    .site-header__inner {
+        gap: var(--space-3); /* smaller gap between logo and actions */
+    }
+
+    .logo-icon {
+        width: clamp(100px, 32vw, 160px);
+    }
+
+    .site-header__actions {
+        gap: var(--space-2); /* smaller gap between CTA button and hamburger */
+    }
+
+    .btn--sm {
+        padding: 0.4rem 0.75rem;
+        font-size: 0.75rem; /* or var(--text-xs) if you have it */
+    }
+
+    .mobile-toggle {
+        width: 32px;
+        height: 32px;
+    }
 }
 </style>

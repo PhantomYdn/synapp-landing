@@ -27,17 +27,12 @@ watch(() => props.open, (val) => {
 
 <style scoped>
 .mobile-menu {
-  position: fixed;
-  inset: 0;
-  top: 65px;
-  background: rgba(8, 11, 23, 0.97);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  z-index: calc(var(--z-sticky) - 1);
-  padding: var(--space-6) var(--container-pad);
-  border-top: 1px solid var(--color-border);
+    --menu-alpha: 0.97;
+    padding: var(--space-6) var(--container-pad);
+    background: rgba(8, 11, 23, var(--menu-alpha));
+    backdrop-filter: blur(20px);
+    transition: --menu-alpha 220ms ease;
 }
-
 @media (min-width: 768px) {
   .mobile-menu {
     display: none;

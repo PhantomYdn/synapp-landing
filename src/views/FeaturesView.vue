@@ -60,7 +60,6 @@
                 <!-- Roadmap note -->
                 <div class="roadmap-note reveal">
                     <div class="roadmap-note__inner">
-                        <span class="pill pill--pink">Coming Soon</span>
                         <p class="roadmap-note__text">
                             SynApp is actively developed. Additional capabilities including advanced analytics, custom webhook triggers, and deeper API access are on the roadmap. <RouterLink to="/contact">Reach out</RouterLink> if you have a specific requirement.
                         </p>
