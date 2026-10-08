@@ -1,0 +1,14 @@
+services:
+  synapp-landing:
+    image: registry.gitlab.com/synapp.us/synapp-landing
+    networks:
+      - proxy
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      - ./data:/data
+
+networks:
+  proxy:
+    external: true
