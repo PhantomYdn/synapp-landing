@@ -59,7 +59,7 @@
                             v-for="link in socialLinks"
                             :key="link.id"
                             :href="link.href"
-                            class="hero-social__link"
+                            :class="`hero-social__link hero-social__link--${link.id}`"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
@@ -333,41 +333,65 @@ const socialLinks = [
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: var(--space-3);
+    gap: var(--space-4);
 }
 
 .hero-social__link {
+    position: relative;
     display: inline-flex;
     align-items: center;
     gap: var(--space-2);
-    padding: 0.6rem 1.1rem;
-    font-size: var(--text-sm);
-    font-weight: 600;
-    color: var(--color-text-muted);
+    padding: 0.8rem 1.4rem;
+    font-size: var(--text-base);
+    font-weight: 700;
+    color: #fff;
     text-decoration: none;
-    border: 1px solid var(--color-border);
+    border: 1px solid transparent;
     border-radius: var(--radius-md);
-    background: rgba(16, 23, 43, 0.4);
-    transition: all var(--transition-base);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .hero-social__link svg {
-    width: 16px;
-    height: 16px;
+    width: 20px;
+    height: 20px;
     flex-shrink: 0;
 }
 
-.hero-social__link:hover {
-    color: var(--color-white);
-    border-color: rgba(15, 165, 233, 0.5);
-    background: rgba(15, 165, 233, 0.1);
-    transform: translateY(-1px);
-    box-shadow: 0 6px 20px -6px rgba(15, 165, 233, 0.4);
+.hero-social__link:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 3px;
 }
 
-.hero-social__link:focus-visible {
-    outline: 2px solid var(--color-accent-blue);
-    outline-offset: 2px;
+/* Brand-colored buttons with a matching glow */
+.hero-social__link--x {
+    background: #000;
+    border-color: rgba(255, 255, 255, 0.45);
+    box-shadow: 0 0 28px -4px rgba(255, 255, 255, 0.45), 0 0 64px -10px rgba(255, 255, 255, 0.25);
+}
+
+.hero-social__link--linkedin {
+    background: #0a66c2;
+    border-color: #3b8ee0;
+    box-shadow: 0 0 28px -4px rgba(10, 102, 194, 0.95), 0 0 64px -10px rgba(10, 102, 194, 0.65);
+}
+
+/* Normal hover animation */
+.hero-social .hero-social__link:hover {
+    transform: translateY(-2px);
+}
+
+.hero-social__link--x:hover {
+    box-shadow: 0 0 32px -6px rgba(255, 255, 255, 0.55), 0 0 72px -14px rgba(255, 255, 255, 0.35);
+}
+
+.hero-social__link--linkedin:hover {
+    box-shadow: 0 0 32px -6px rgba(10, 102, 194, 1), 0 0 72px -14px rgba(10, 102, 194, 0.75);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero-social .hero-social__link:hover {
+        transform: none;
+    }
 }
 
 .hero-video {
