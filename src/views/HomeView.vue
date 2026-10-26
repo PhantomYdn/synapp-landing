@@ -6,7 +6,7 @@
     <FeaturesTeaserSection />
     <HowItWorksSection />
     <PricingTeaserSection />
-    <TestimonialsSection />
+<!--    <TestimonialsSection />-->
     <FaqSection />
     <FinalCtaSection />
   </div>
