@@ -1,5 +1,5 @@
 /* Reveal on scroll */
-.reveal {
+.reveal.is-pending {
   opacity: 0;
   transform: translateY(28px);
   transition:
@@ -85,7 +85,8 @@
 
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
-  .reveal {
+  .reveal,
+  .reveal.is-pending {
     opacity: 1;
     transform: none;
     transition: none;

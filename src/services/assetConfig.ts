@@ -8,7 +8,7 @@ export const assetConfig = {
   logo: '/src/assets/logo/synapp-logo.svg',
 
   // OG image (in /public)
-  ogImage: '/og-image.png',
+  ogImage: '/full_white.png',
 
   // Demo video
   // Set videoUrl to a YouTube embed URL when the demo is ready.

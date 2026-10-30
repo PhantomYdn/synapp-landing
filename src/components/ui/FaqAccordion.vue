@@ -26,7 +26,7 @@
         :id="`faq-panel-${uid}-${index}`"
         :aria-labelledby="`faq-trigger-${uid}-${index}`"
         role="region"
-        :style="{ maxHeight: openIndex === index ? panelHeights[index] + 'px' : '0px' }"
+        :style="{ maxHeight: openIndex === index ? (panelHeights[index] === undefined ? 'none' : panelHeights[index] + 'px') : '0px' }"
         :ref="(el) => setRef(el as HTMLElement | null, index)"
       >
         <p class="faq-item__answer">{{ item.answer }}</p>
@@ -36,12 +36,12 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, useId } from 'vue'
 import type { FaqItem } from '@/data/faq'
 
 const props = defineProps<{ items: FaqItem[] }>()
 
-const uid = Math.random().toString(36).slice(2, 8)
+const uid = useId()
 const openIndex = ref<number | null>(0)
 const panelEls = ref<(HTMLElement | null)[]>([])
 const panelHeights = ref<number[]>([])

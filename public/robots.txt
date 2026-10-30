@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://synapp.io/sitemap.xml
+Sitemap: https://synapp.us/sitemap.xml

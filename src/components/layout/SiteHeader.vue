@@ -7,14 +7,14 @@
 
             <nav class="site-header__nav" aria-label="Primary navigation">
                 <RouterLink to="/" class="nav-link">{{ t('nav.home') }}</RouterLink>
-                <RouterLink to="/features" class="nav-link">{{ t('nav.features') }}</RouterLink>
-                <RouterLink to="/pricing" class="nav-link">{{ t('nav.pricing') }}</RouterLink>
+                <RouterLink to="/features/" class="nav-link">{{ t('nav.features') }}</RouterLink>
+                <RouterLink to="/pricing/" class="nav-link">{{ t('nav.pricing') }}</RouterLink>
                 <a href="/docs/" class="nav-link">{{ t('nav.docs') }}</a>
-                <RouterLink to="/contact" class="nav-link">{{ t('nav.contact') }}</RouterLink>
+                <RouterLink to="/contact/" class="nav-link">{{ t('nav.contact') }}</RouterLink>
             </nav>
 
             <div class="site-header__actions">
-                <RouterLink to="/contact" class="btn btn--primary btn--sm">
+                <RouterLink to="/contact/" class="btn btn--primary btn--sm">
                     {{ t('nav.cta') }}
                 </RouterLink>
 

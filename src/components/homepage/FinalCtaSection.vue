@@ -15,13 +15,13 @@
           Book a demo and see exactly how SynApp would work for your setup. No pressure — just a clear look at what's possible.
         </p>
         <div class="final-cta__actions reveal reveal--delay-3">
-          <RouterLink to="/contact" class="final-btn final-btn--primary">
+          <RouterLink to="/contact/" class="final-btn final-btn--primary">
             Book a Demo
             <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M3 8h10M9 4l4 4-4 4"/>
             </svg>
           </RouterLink>
-          <RouterLink to="/pricing" class="final-btn final-btn--ghost">
+          <RouterLink to="/pricing/" class="final-btn final-btn--ghost">
             View Pricing
           </RouterLink>
         </div>

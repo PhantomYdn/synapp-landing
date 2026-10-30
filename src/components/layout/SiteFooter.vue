@@ -27,11 +27,11 @@
 
             <nav class="site-footer__nav" aria-label="Footer navigation">
                 <RouterLink to="/" class="footer-link">{{ t('footer.home') }}</RouterLink>
-                <RouterLink to="/features" class="footer-link">{{ t('footer.features') }}</RouterLink>
-                <RouterLink to="/pricing" class="footer-link">{{ t('footer.pricing') }}</RouterLink>
+                <RouterLink to="/features/" class="footer-link">{{ t('footer.features') }}</RouterLink>
+                <RouterLink to="/pricing/" class="footer-link">{{ t('footer.pricing') }}</RouterLink>
                 <a href="/docs/" class="footer-link">{{ t('footer.docs') }}</a>
-                <RouterLink to="/contact" class="footer-link">{{ t('footer.contact') }}</RouterLink>
-                <RouterLink to="/privacy-policy" class="footer-link">{{ t('footer.privacy') }}</RouterLink>
+                <RouterLink to="/contact/" class="footer-link">{{ t('footer.contact') }}</RouterLink>
+                <RouterLink to="/privacy-policy/" class="footer-link">{{ t('footer.privacy') }}</RouterLink>
             </nav>
         </div>
 

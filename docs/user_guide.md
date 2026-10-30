@@ -1,3 +1,8 @@
+---
+title: SynApp User Guide
+description: Step-by-step instructions for managing Telegram chats, users, invitations, tags, rules, and settings in SynApp.
+---
+
 # SynApp User Guide
 
 SynApp is a web console for managing your Telegram groups and channels from one
@@ -226,10 +231,21 @@ Select users, click **Send message**, compose, and send. Each selected user
 receives the message directly from the bot.
 
 ### Add a user to the system
-Click **Add user** to pre-create a user record from their details. This lets you
-proactively assign someone to chats/tags **before** they have interacted with
-the bot. When that person later starts the bot via Telegram, SynApp resolves and
-links them automatically.
+Create a record for someone who cannot start the bot yet or has not been tracked.
+
+1. Open **Users** → **Add users to system**.
+2. In **Paste users**, enter one Telegram profile link or handle per line (with
+   or without `@`). Optionally add a comma and email: `@alex, alex@example.com`.
+   Numeric Telegram IDs are not supported.
+3. Adjust **Input format** if your list uses different separators. Check the
+   preview and correct any flagged fields, then click **Add 1 user** or
+   **Add N users**.
+4. Select the new users in the table, click **Add to chats**, choose their chats,
+   and confirm.
+
+When they open the bot and press **Start**, SynApp automatically sends their
+assigned chat invitations. They accept the invitations to join.
+See the [complete walkthrough](./use_cases.md#_8-preparing-chat-access-before-a-user-starts-the-bot).
 
 ### Delete a user from the system
 Select a user and click **Delete user**, then confirm. This removes the user

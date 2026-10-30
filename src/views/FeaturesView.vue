@@ -17,7 +17,7 @@
                     :id="group.id"
                 >
                     <div class="feature-group__header reveal">
-                        <div class="feature-group__badge pill">{{ group.title }}</div>
+                        <h2 class="feature-group__badge pill">{{ group.title }}</h2>
                         <p class="feature-group__desc">{{ group.description }}</p>
                     </div>
 
@@ -51,8 +51,8 @@
                             <p class="features-mid-cta__sub">Book a personalized demo and see how SynApp fits your specific setup.</p>
                         </div>
                         <div class="features-mid-cta__actions">
-                            <RouterLink to="/contact" class="mid-cta-btn mid-cta-btn--primary">Book a Demo</RouterLink>
-                            <RouterLink to="/pricing" class="mid-cta-btn mid-cta-btn--ghost">See Pricing</RouterLink>
+                            <RouterLink to="/contact/" class="mid-cta-btn mid-cta-btn--primary">Book a Demo</RouterLink>
+                            <RouterLink to="/pricing/" class="mid-cta-btn mid-cta-btn--ghost">See Pricing</RouterLink>
                         </div>
                     </div>
                 </div>
@@ -61,7 +61,7 @@
                 <div class="roadmap-note reveal">
                     <div class="roadmap-note__inner">
                         <p class="roadmap-note__text">
-                            SynApp is actively developed. Additional capabilities including advanced analytics, custom webhook triggers, and deeper API access are on the roadmap. <RouterLink to="/contact">Reach out</RouterLink> if you have a specific requirement.
+                            SynApp is actively developed. Additional capabilities including advanced analytics, custom webhook triggers, and deeper API access are on the roadmap. <RouterLink to="/contact/">Reach out</RouterLink> if you have a specific requirement.
                         </p>
                     </div>
                 </div>
@@ -83,7 +83,7 @@ import { usePageMeta } from '@/composables/usePageMeta'
 import { useRevealOnScroll } from '@/composables/useRevealOnScroll'
 
 const { t } = useI18n()
-const baseScreenShotPath = './features/'
+const baseScreenShotPath = '/features/'
 usePageMeta('features')
 useRevealOnScroll()
 </script>

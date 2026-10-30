@@ -85,7 +85,7 @@
                                 t('pricing.enterprise_title')
                             }}</h2>
                         <p class="enterprise-cta__sub">{{ t('pricing.enterprise_sub') }}</p>
-                        <RouterLink to="/contact" class="enterprise-btn">
+                        <RouterLink to="/contact/" class="enterprise-btn">
                             {{ t('pricing.enterprise_cta') }}
                             <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"
                                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">

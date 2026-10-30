@@ -17,6 +17,7 @@ export function useRevealOnScroll(containerRef?: Ref<HTMLElement | null>) {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
+            entry.target.classList.remove('is-pending')
             entry.target.classList.add('is-visible')
             observer?.unobserve(entry.target)
           }
@@ -30,13 +31,18 @@ export function useRevealOnScroll(containerRef?: Ref<HTMLElement | null>) {
 
     const root = containerRef?.value ?? document
     const elements = root.querySelectorAll<HTMLElement>('.reveal')
-    elements.forEach((el) => observer!.observe(el))
+    elements.forEach((el) => {
+      // Never hide above-the-fold content while waiting for an observer callback.
+      if (el.getBoundingClientRect().top < window.innerHeight) {
+        el.classList.add('is-visible')
+      } else {
+        el.classList.add('is-pending')
+        observer!.observe(el)
+      }
+    })
   }
 
-  onMounted(() => {
-    // Small delay so elements are in the DOM
-    setTimeout(initObserver, 60)
-  })
+  onMounted(initObserver)
 
   onUnmounted(() => {
     observer?.disconnect()

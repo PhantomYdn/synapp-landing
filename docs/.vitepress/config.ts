@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import { SITE_URL, SOCIAL_IMAGE } from '../../src/site'
 
 // Docs are served under https://<site>/docs/ alongside the main Vue landing site.
 // The static output is emitted into the main app's dist/docs so nginx serves both.
@@ -11,6 +12,27 @@ export default defineConfig({
   outDir: '../dist/docs',
 
   cleanUrls: false,
+
+  transformHead({ pageData }) {
+    if (pageData.relativePath === '404.md') return []
+    const path = pageData.relativePath.replace(/(^|\/)index\.md$/, '$1').replace(/\.md$/, '.html')
+    const canonical = `${SITE_URL}/docs/${path}`
+    const title = pageData.title ? `${pageData.title} | SynApp Docs` : 'SynApp Docs'
+    const description = pageData.description || 'Learn how to manage Telegram chats, users, invitations, and automation with SynApp.'
+    return [
+      ['link', { rel: 'canonical', href: canonical }],
+      ['meta', { property: 'og:type', content: 'website' }],
+      ['meta', { property: 'og:site_name', content: 'SynApp' }],
+      ['meta', { property: 'og:title', content: title }],
+      ['meta', { property: 'og:description', content: description }],
+      ['meta', { property: 'og:url', content: canonical }],
+      ['meta', { property: 'og:image', content: SOCIAL_IMAGE }],
+      ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
+      ['meta', { name: 'twitter:title', content: title }],
+      ['meta', { name: 'twitter:description', content: description }],
+      ['meta', { name: 'twitter:image', content: SOCIAL_IMAGE }],
+    ]
+  },
 
   head: [
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
@@ -65,6 +87,7 @@ export default defineConfig({
           { text: 'Automating with rules', link: '/use_cases#_5-automating-access-with-tags-and-rules' },
           { text: 'Auditing chat membership', link: '/use_cases#_6-auditing-who-is-actually-in-your-chats' },
           { text: 'Validating from Telegram', link: '/use_cases#_7-validating-team-membership-from-inside-telegram' },
+          { text: 'Preparing access before bot start', link: '/use_cases#_8-preparing-chat-access-before-a-user-starts-the-bot' },
         ],
       },
     ],

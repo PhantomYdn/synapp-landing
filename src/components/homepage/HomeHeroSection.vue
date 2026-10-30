@@ -24,13 +24,13 @@
                 <p class="hero__sub reveal reveal--delay-2">{{ t('home.hero.sub') }}</p>
 
                 <div class="hero__actions reveal reveal--delay-3">
-                    <RouterLink to="/contact" class="hero-btn hero-btn--primary">
+                    <RouterLink to="/contact/" class="hero-btn hero-btn--primary">
                         {{ t('home.hero.cta_primary') }}
                         <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                             <path d="M3 8h10M9 4l4 4-4 4"/>
                         </svg>
                     </RouterLink>
-                    <RouterLink to="/features" class="hero-btn hero-btn--ghost">
+                    <RouterLink to="/features/" class="hero-btn hero-btn--ghost">
                         {{ t('home.hero.cta_secondary') }}
                     </RouterLink>
                 </div>

@@ -1,3 +1,8 @@
+---
+title: SynApp Use Cases & Walkthroughs
+description: Practical SynApp walkthroughs for onboarding users, preparing chat invitations, broadcasting messages, and managing Telegram access.
+---
+
 # SynApp Use Cases & Walkthroughs
 
 This document shows **real-world situations** SynApp is built to solve, and walks
@@ -58,21 +63,27 @@ effort.
 
 **Walkthrough:**
 
-1. On the [Users](./user_guide.md#users) page, click **Add user** for each new
-   hire to [pre-create them in the system](./user_guide.md#add-a-user-to-the-system).
-   This lets you assign them before they've interacted with the bot.
+1. On the [Users](./user_guide.md#users) page, click **Add users to system**.
+   Paste all five Telegram handles or profile links, one per line, with optional
+   comma-separated emails. Check the preview, fix any flagged rows, and click
+   **Add 5 users** — see
+   [Add a user to the system](./user_guide.md#add-a-user-to-the-system).
 2. Select the five new users and click **Add tags** → apply an `Engineering`
    tag (see [Users → Add/remove tags](./user_guide.md#add--remove-tags)).
 3. With the five still selected, click **Add to chats** and pick the engineering
-   chats — see [Users → Add users to chats](./user_guide.md#add-users-to-chats).
-4. Open the [Invitations](./user_guide.md#invitations) page to see the pending
-   invites that were created.
-5. As people start the bot via Telegram, SynApp **auto-resolves and links** the
-   pre-created records. For anyone slow to respond, select their invitation and
-   click **Resend**.
+   chats — see [Users → Add users to chats](./user_guide.md#add-users-to-chats-1).
+4. Share your bot's Telegram link with the new hires. Find its username under
+   [Settings → Bot username](./user_guide.md#settings), and ask each person to
+   open the bot and press **Start**.
+5. As people start the bot, SynApp links their pre-created records and
+   automatically sends their chat invitations. Each person uses those
+   invitations to join. Review pending invitations on the
+   [Invitations](./user_guide.md#invitations) page; use **Resend** if someone
+   needs another invitation after starting the bot.
 
-**Result:** All new hires are tagged and queued for the correct chats; they're
-added automatically as soon as they join, with no per-person manual work.
+**Result:** All new hires are tagged and assigned to the correct chats in advance.
+When they start the bot, they receive their invitations automatically and can
+join without an admin assigning their chats again.
 
 ---
 
@@ -211,6 +222,47 @@ is a genuine team member or has been blacklisted — without leaving Telegram.
 
 **Result:** Anyone in the chat can validate membership on the spot, and the
 answer stays consistent with how you've organized users in SynApp.
+
+---
+
+## 8. Preparing chat access before a user starts the bot
+
+**Situation:** Maria is an external collaborator who needs access to "Project
+Phoenix" and "Partner Updates." She cannot open the bot until tomorrow, and the
+bot has not tracked her yet. You have her Telegram handle, `@maria`, and want to
+finish setting up her access today.
+
+**Goal:** Create Maria's record and assign her chats now, so she automatically
+receives the right invitations when she starts the bot.
+
+**Walkthrough:**
+
+1. Open [Users](./user_guide.md#users) and search for Maria to check whether she
+   already has a record. If she is missing, click **Add users to system**.
+2. In **Paste users**, enter `@maria`. If you also have her email, enter
+   `@maria, maria@example.com`. You can use her Telegram profile link instead
+   of the handle; do not use a numeric Telegram ID.
+3. Leave **Separate users by** set to **New line** and **Separate identifier and
+   email by** set to **Comma (,)**. Check that **Check preview** shows **1 user**
+   and the correct details. Correct any flagged fields, then click **Add 1 user**
+   — see [Add a user to the system](./user_guide.md#add-a-user-to-the-system).
+4. Once the dialog closes, select Maria in the Users table. Click **Add to
+   chats**, select "Project Phoenix" and "Partner Updates," and confirm — see
+   [Users → Add users to chats](./user_guide.md#add-users-to-chats-1). If she
+   already had a record in step 1, use that record for this step.
+5. Share your bot's Telegram link with Maria, using the username shown under
+   [Settings → Bot username](./user_guide.md#settings). Ask her to open it and
+   press **Start** when she is ready. Her SynApp record and chat assignments
+   are already prepared while you wait.
+6. Tomorrow, Maria opens the bot and presses **Start**. SynApp links her Telegram
+   account to the record and automatically sends invitations to "Project
+   Phoenix" and "Partner Updates."
+7. Maria uses the invitations to join the two chats. You can review any pending
+   invitations on the [Invitations](./user_guide.md#invitations) page.
+
+**Result:** You prepare Maria's chat access before she can interact with the bot.
+Starting the bot delivers her invitations automatically; she joins by accepting
+them, without you repeating the setup.
 
 ---
 

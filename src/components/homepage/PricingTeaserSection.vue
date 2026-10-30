@@ -25,14 +25,14 @@
             </div>
 
             <div class="teaser-cta reveal">
-                <RouterLink to="/pricing" class="teaser-btn teaser-btn--primary">
+                <RouterLink to="/pricing/" class="teaser-btn teaser-btn--primary">
                     See Full Pricing
                     <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
                          stroke-linejoin="round" aria-hidden="true">
                         <path d="M3 8h10M9 4l4 4-4 4"/>
                     </svg>
                 </RouterLink>
-                <RouterLink to="/contact" class="teaser-btn teaser-btn--ghost">
+                <RouterLink to="/contact/" class="teaser-btn teaser-btn--ghost">
                     Talk to Sales
                 </RouterLink>
             </div>

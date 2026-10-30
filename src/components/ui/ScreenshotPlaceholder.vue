@@ -13,6 +13,7 @@
             :src="src"
             :alt="label"
             loading="lazy"
+            decoding="async"
             class="screenshot-img"
         />
         <div v-else class="screenshot-placeholder__inner">
@@ -25,9 +26,8 @@
         </div>
 
         <!-- Lightbox Modal -->
-        <Teleport to="body">
+        <Teleport v-if="isModalOpen" to="body">
             <div
-                v-if="isModalOpen"
                 class="screenshot-modal"
                 @click.self="closeModal"
                 @keydown.esc="closeModal"
@@ -42,7 +42,7 @@
                             <line x1="6" y1="6" x2="18" y2="18" />
                         </svg>
                     </button>
-                    <img v-if="src" :src="src" :alt="label" class="screenshot-modal__image" />
+                    <img v-if="src" :src="src" :alt="label" decoding="async" class="screenshot-modal__image" />
                 </div>
             </div>
         </Teleport>

@@ -21,7 +21,7 @@
       </div>
 
       <div class="features-teaser__cta reveal">
-        <RouterLink to="/features" class="cta-btn">
+        <RouterLink to="/features/" class="cta-btn">
           See All Features
           <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M3 8h10M9 4l4 4-4 4"/>

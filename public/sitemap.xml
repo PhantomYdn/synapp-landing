@@ -1,28 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://synapp.io/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://synapp.io/features</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://synapp.io/pricing</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://synapp.io/contact</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://synapp.io/privacy-policy</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
+  <url><loc>https://synapp.us/</loc></url>
+  <url><loc>https://synapp.us/features/</loc></url>
+  <url><loc>https://synapp.us/pricing/</loc></url>
+  <url><loc>https://synapp.us/contact/</loc></url>
+  <url><loc>https://synapp.us/privacy-policy/</loc></url>
+  <url><loc>https://synapp.us/docs/</loc></url>
+  <url><loc>https://synapp.us/docs/user_guide.html</loc></url>
+  <url><loc>https://synapp.us/docs/use_cases.html</loc></url>
 </urlset>

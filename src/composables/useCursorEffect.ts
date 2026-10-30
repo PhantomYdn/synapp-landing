@@ -65,7 +65,7 @@ export function useCursorEffect() {
   }
 
   onMounted(() => {
-    if (isTouch() || isMobile()) return
+    if (isTouch() || isMobile() || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
 
     // Create cursor elements
     cursorDot = document.createElement('div')

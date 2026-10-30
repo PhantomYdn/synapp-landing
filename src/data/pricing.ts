@@ -29,7 +29,7 @@ export const pricingPlans: PricingPlan[] = [
     description: 'Perfect for small teams getting started.',
     highlighted: false,
     ctaLabel: 'Get Started',
-    ctaLink: '/contact',
+    ctaLink: '/contact/',
     features: [
       'Up to 50 groups/channels',
       'Group & Channel Manager',
@@ -47,7 +47,7 @@ export const pricingPlans: PricingPlan[] = [
     badgeVariant: 'blue',
     highlighted: true,
     ctaLabel: 'Start 7-Day Trial',
-    ctaLink: '/contact',
+    ctaLink: '/contact/',
     features: [
       'Up to 100 groups/channels',
       'Group & Channel Manager',
@@ -64,7 +64,7 @@ export const pricingPlans: PricingPlan[] = [
     description: 'For teams needing full identity + CRM traceability.',
     highlighted: false,
     ctaLabel: 'Start Trial or Talk to Sales',
-    ctaLink: '/contact',
+    ctaLink: '/contact/',
     features: [
       'Up to 200 groups/channels (Unlimited on custom plans)',
       'Group & Channel Manager',
@@ -82,7 +82,7 @@ export const pricingPlans: PricingPlan[] = [
     description: 'Full control for large organizations & regulated environments.',
     highlighted: false,
     ctaLabel: 'Contact Sales',
-    ctaLink: '/contact',
+    ctaLink: '/contact/',
     features: [
       'Unlimited groups/channels',
       'Group & Channel Manager',
